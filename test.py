@@ -1,3 +1,3 @@
-import reminder 
-
-reminder.reminder("how r u",3,True)
+from Reminder import *
+r = Reminder()
+r.reminder()
