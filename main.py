@@ -1,10 +1,16 @@
 import subprocess
+import pyttsx
 import time
 import datetime
 
 def sendmessage(message):
-    subprocess.Popen(['notify-send', message])
-    return
+	message = "Hey hitman "+message
+	subprocess.Popen(['notify-send', message])
+	engine = pyttsx.init()
+	engine.setProperty('rate',150)
+	engine.say(message) 
+	engine.runAndWait()
+	return
 
 def main():
 	print "Current Time :: "+time.ctime()
