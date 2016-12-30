@@ -1,3 +1,3 @@
 import reminder 
 
-reminder.main()
+reminder.reminder("how r u",1,True)
