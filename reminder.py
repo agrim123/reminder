@@ -1,10 +1,12 @@
+#!/usr/bin/python
+
 import subprocess
 import pyttsx
 import time
 import datetime
 
-def sendmessage(message):
-	message = "Hey hitman "+message
+def reminder(message):
+	message = "Hey hitman " + message
 	subprocess.Popen(['notify-send', message])
 	engine = pyttsx.init()
 	engine.setProperty('rate',150)
@@ -22,7 +24,7 @@ def main():
 	  print t - j
 	  time.sleep(1)
 	else:
-	  sendmessage(message)
+	  reminder(message)
 
 if __name__ == "__main__":
 	main()
