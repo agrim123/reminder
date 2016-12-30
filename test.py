@@ -1,3 +1,2 @@
 from Reminder import *
-r = Reminder()
-r.reminder()
+r = Reminder().reminder()
