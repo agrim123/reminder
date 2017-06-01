@@ -14,13 +14,13 @@ class Reminder(object):
 		self.name = 'hitman'
 		self.timer = 2
 
-	def _set_message(self,message):
+	def _set_message(self, message):
 		self.message = message
 
 	def get_message(self):
 		return self.message
 
-	def _set_timer(self,timer):
+	def _set_timer(self, timer):
 		self.timer = timer
 
 	def get_timer(self):
@@ -30,7 +30,7 @@ class Reminder(object):
 		self._set_message(raw_input("Enter message :: "))
 		self._set_timer(input("Enter time(seconds) :: "))
 
-	def reminder(self,message = None,timer = None,voice = None,name = None):
+	def reminder(self, message = None ,timer = None ,voice = None ,name = None):
 		if message == None and timer == None:
 			self._get_input()
 			voice = True
@@ -48,13 +48,13 @@ class Reminder(object):
 			else:
 				return
 
-	def _narrateMessage(self,message):
+	def _narrateMessage(self, message):
 		engine = pyttsx.init()
 		engine.setProperty('rate',150)
 		engine.say(message) 
 		engine.runAndWait()
 
-	def countdown(self,timer):
+	def countdown(self, timer):
 		print("Countdown started")
 		for j in range(1, timer):
 			time.sleep(1)
